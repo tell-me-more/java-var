@@ -107,6 +107,9 @@ errorItems.forEach((item) => {
         } else if (codeText.includes('boolean fertig = "true"')) {
           feedback.textContent =
             "Richtig! Bei boolean schreibt man true ohne Anführungszeichen.";
+        } else if (codeText.includes("double hund =")) {
+          feedback.textContent =
+            "Richtig! Datentyp double kann keinen Text speichern.";
         } else {
           feedback.textContent = "Richtig! Diese Zeile ist korrekt geschrieben.";
         }
