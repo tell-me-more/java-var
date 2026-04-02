@@ -29,6 +29,25 @@
           liegt ein Wert (z. B. <code>0, 15, Informatik</code>). So arbeitet eine
           <strong>Variable</strong>.
         </p>
+        <figure class="didactic-figure">
+          <svg viewBox="0 0 760 240" role="img" aria-labelledby="einstiegSvgTitel einstiegSvgDesc">
+            <title id="einstiegSvgTitel">Variable als beschriftete Speicherbox</title>
+            <desc id="einstiegSvgDesc">
+              Eine Speicherbox zeigt oben den Variablennamen punkte und darunter den aktuell gespeicherten Wert 0.
+            </desc>
+            <rect x="22" y="22" width="716" height="196" rx="14" class="svg-panel" />
+            <text x="50" y="62" class="svg-heading">Variable = Name + Speicherinhalt</text>
+            <rect x="70" y="82" width="270" height="112" rx="12" class="svg-box" />
+            <line x1="70" y1="126" x2="340" y2="126" class="svg-line" />
+            <text x="88" y="113" class="svg-label">Name: <tspan class="svg-code">punkte</tspan></text>
+            <text x="88" y="164" class="svg-value">Wert: 0</text>
+            <path d="M365 138 H470" class="svg-arrow" />
+            <polygon points="470,138 455,130 455,146" class="svg-arrow-tip" />
+            <text x="485" y="126" class="svg-note">Name bleibt</text>
+            <text x="485" y="152" class="svg-note">Wert kann sich ändern</text>
+          </svg>
+          <figcaption>Merke: Der Variablenname beschreibt den Speicherplatz, der Wert ist der aktuelle Inhalt.</figcaption>
+        </figure>
       </section>
 
       <section id="grundidee" aria-labelledby="grundideeTitel" class="card">
@@ -86,6 +105,36 @@ int punkte = 0;
 punkte = punkte + 1;</code></pre>
           </article>
         </div>
+
+        <figure class="didactic-figure">
+          <svg viewBox="0 0 760 260" role="img" aria-labelledby="zuweisungSvgTitel zuweisungSvgDesc">
+            <title id="zuweisungSvgTitel">Zuweisung eines Werts zu einer Variablen</title>
+            <desc id="zuweisungSvgDesc">
+              Der Ausdruck punkte + 1 wird berechnet und das Ergebnis 4 wird danach in die Variable punkte gespeichert.
+            </desc>
+            <rect x="20" y="20" width="720" height="220" rx="14" class="svg-panel" />
+            <text x="48" y="56" class="svg-heading">So funktioniert: punkte = punkte + 1;</text>
+
+            <rect x="52" y="82" width="190" height="120" rx="10" class="svg-box" />
+            <text x="70" y="112" class="svg-label">1) Alter Wert lesen</text>
+            <text x="70" y="156" class="svg-value">punkte = 3</text>
+
+            <path d="M252 142 H338" class="svg-arrow" />
+            <polygon points="338,142 323,134 323,150" class="svg-arrow-tip" />
+
+            <rect x="350" y="82" width="160" height="120" rx="10" class="svg-box" />
+            <text x="370" y="112" class="svg-label">2) Rechnen</text>
+            <text x="370" y="156" class="svg-value">3 + 1 = 4</text>
+
+            <path d="M520 142 H606" class="svg-arrow" />
+            <polygon points="606,142 591,134 591,150" class="svg-arrow-tip" />
+
+            <rect x="618" y="82" width="110" height="120" rx="10" class="svg-box svg-box-accent" />
+            <text x="632" y="112" class="svg-label">3) Speichern</text>
+            <text x="632" y="156" class="svg-value">punkte = 4</text>
+          </svg>
+          <figcaption>Bei einer Zuweisung wird zuerst rechts gerechnet und anschließend links gespeichert.</figcaption>
+        </figure>
       </section>
 
       <section id="java" aria-labelledby="javaTitel" class="card">
@@ -118,6 +167,43 @@ punkte = punkte + 1;</code></pre>
             <button id="resetStep" type="button">Neu starten</button>
           </div>
         </div>
+
+        <figure class="didactic-figure">
+          <svg viewBox="0 0 760 260" role="img" aria-labelledby="verlaufSvgTitel verlaufSvgDesc">
+            <title id="verlaufSvgTitel">Wertänderung im Zeitverlauf</title>
+            <desc id="verlaufSvgDesc">
+              Die Variable punkte bleibt gleich benannt, der Wert ändert sich von 0 über 1 zu 2.
+            </desc>
+            <rect x="20" y="20" width="720" height="220" rx="14" class="svg-panel" />
+            <text x="48" y="56" class="svg-heading">Name konstant, Wert verändert sich</text>
+
+            <line x1="84" y1="182" x2="678" y2="182" class="svg-line" />
+            <circle cx="164" cy="182" r="8" class="svg-dot" />
+            <circle cx="364" cy="182" r="8" class="svg-dot" />
+            <circle cx="564" cy="182" r="8" class="svg-dot" />
+
+            <text x="134" y="210" class="svg-note">Start</text>
+            <text x="334" y="210" class="svg-note">+1</text>
+            <text x="534" y="210" class="svg-note">+1</text>
+
+            <g transform="translate(95 82)">
+              <rect width="138" height="74" rx="10" class="svg-box" />
+              <text x="14" y="31" class="svg-label">punkte</text>
+              <text x="14" y="56" class="svg-value">Wert: 0</text>
+            </g>
+            <g transform="translate(295 82)">
+              <rect width="138" height="74" rx="10" class="svg-box" />
+              <text x="14" y="31" class="svg-label">punkte</text>
+              <text x="14" y="56" class="svg-value">Wert: 1</text>
+            </g>
+            <g transform="translate(495 82)">
+              <rect width="138" height="74" rx="10" class="svg-box" />
+              <text x="14" y="31" class="svg-label">punkte</text>
+              <text x="14" y="56" class="svg-value">Wert: 2</text>
+            </g>
+          </svg>
+          <figcaption>Die Variable heißt immer <code>punkte</code>, nur der gespeicherte Inhalt ändert sich Schritt für Schritt.</figcaption>
+        </figure>
       </section>
 
       <section id="datentypen" aria-labelledby="datentypenTitel" class="card">
