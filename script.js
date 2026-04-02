@@ -25,11 +25,11 @@ document.getElementById("resetPunkt").addEventListener("click", () => {
 
 // 2) Schritt-für-Schritt-Erklärung
 const schritte = [
-  "1) Deklaration: Es wird eine Variable mit dem Namen 'punkte' angelegt (Typ: int).",
-  "2) Initialisierung: int punkte = 0; → In 'punkte' wird der Startwert 0 gespeichert.",
-  "3) Alter Wert lesen: Bei punkte = punkte + 1; liest Java zuerst den aktuellen Wert von 'punkte'.",
-  "4) Rechnen: Zu diesem Wert wird 1 addiert.",
-  "5) Speichern: Das Ergebnis wird wieder in 'punkte' gespeichert. Der Name bleibt gleich.",
+  "Deklaration: Es wird eine Variable mit dem Namen 'punkte' angelegt (Typ: int).",
+  "Initialisierung: int punkte = 0; → In 'punkte' wird der Startwert 0 gespeichert.",
+  "Alter Wert lesen: Bei punkte = punkte + 1; liest Java zuerst den aktuellen Wert von 'punkte'.",
+  "Rechnen: Zu diesem Wert wird 1 addiert.",
+  "Speichern: Das Ergebnis wird wieder in 'punkte' gespeichert. Der Name bleibt gleich.",
 ];
 
 const stepList = document.getElementById("stepList");
