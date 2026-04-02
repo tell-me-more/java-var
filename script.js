@@ -118,6 +118,9 @@ errorItems.forEach((item) => {
         } else if (codeText.includes("String name = Mia")) {
           feedback.textContent =
             "Noch nicht. 'Mia' muss in Anführungszeichen stehen.";
+        } else if (codeText.includes("double hund = ")){ 
+          feedback.textContent = 
+            "Leider nicht richtig. Schau dir Datentyp und Inhalt nochmal genau an."
         } else {
           feedback.textContent =
             "Noch nicht. boolean nutzt true/false ohne Anführungszeichen.";
