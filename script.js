@@ -81,7 +81,7 @@ datentypSelects.forEach((select) => {
       feedback.textContent = "Richtig!";
       feedback.className = "feedback ok";
     } else {
-      feedback.textContent = `Noch nicht richtig. Korrekt ist: ${korrekt}.`;
+      feedback.textContent = `Noch nicht richtig.`;
       feedback.className = "feedback error";
     }
   });
