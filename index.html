@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lernwebseite: Variablen in der Algorithmierung und in Java</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#hauptinhalt">Zum Inhalt springen</a>
+
+    <header class="hero" aria-labelledby="seitenTitel">
+      <div class="container">
+        <p class="kicker">Informatik · Klasse 7</p>
+        <h1 id="seitenTitel">Variablen verstehen und in Java anwenden</h1>
+        <p class="lead">
+          Wie merkt sich ein Programm einen Namen, ein Alter oder einen Punktestand?
+        </p>
+      </div>
+    </header>
+
+    <main id="hauptinhalt" class="container">
+      <section id="einstieg" aria-labelledby="einstiegTitel" class="card">
+        <h2 id="einstiegTitel">Start / Einstieg</h2>
+        <p>
+          Stell dir vor, ein Programm hat viele <strong>beschriftete Boxen</strong>.
+          Auf jeder Box steht ein Name (z. B. <code>punkte</code>), und in der Box
+          liegt ein Wert (z. B. <code>0</code>). So arbeitet eine
+          <strong>Variable</strong>.
+        </p>
+      </section>
+
+      <section id="grundidee" aria-labelledby="grundideeTitel" class="card">
+        <h2 id="grundideeTitel">Was ist eine Variable?</h2>
+        <p>
+          Eine Variable ist ein <strong>benannter Speicherplatz</strong> für einen
+          Wert. Der <strong>Name</strong> bleibt gleich, der
+          <strong>Inhalt</strong> kann sich ändern.
+        </p>
+
+        <div class="interactive-block" aria-labelledby="variablenBoxTitel">
+          <h3 id="variablenBoxTitel">Interaktiv: Variablen-Box</h3>
+          <div class="box-visual" role="group" aria-label="Variablenbox punkte">
+            <div class="box-label">Name: <strong>punkte</strong></div>
+            <div class="box-value" aria-live="polite">
+              Wert: <span id="punkteAnzeige">0</span>
+            </div>
+          </div>
+          <div class="button-row">
+            <button id="minusPunkt" type="button">-1 Punkt</button>
+            <button id="plusPunkt" type="button">+1 Punkt</button>
+            <button id="resetPunkt" type="button">Zurücksetzen</button>
+          </div>
+          <p class="hint">
+            Beobachte: <strong>Der Name bleibt „punkte“</strong>, nur der Wert ändert
+            sich.
+          </p>
+        </div>
+      </section>
+
+      <section id="algorithmus" aria-labelledby="algorithmusTitel" class="card">
+        <h2 id="algorithmusTitel">Variablen im Algorithmus</h2>
+        <p>Algorithmen brauchen Variablen für:</p>
+        <ul>
+          <li><strong>Eingaben</strong> (z. B. Name, Alter)</li>
+          <li><strong>Zwischenergebnisse</strong> (z. B. Punkte zählen)</li>
+          <li><strong>Ausgaben</strong> (z. B. Ergebnis anzeigen)</li>
+        </ul>
+
+        <div class="split">
+          <article>
+            <h3>Pseudocode (einfach)</h3>
+            <pre><code>name ← "Tom"
+alter ← 12
+punkte ← 0
+punkte ← punkte + 1
+Ausgabe(name, alter, punkte)</code></pre>
+          </article>
+          <article>
+            <h3>In Java</h3>
+            <pre><code>String name = "Tom";
+int alter = 12;
+int punkte = 0;
+punkte = punkte + 1;</code></pre>
+          </article>
+        </div>
+      </section>
+
+      <section id="java" aria-labelledby="javaTitel" class="card">
+        <h2 id="javaTitel">Variablen in Java</h2>
+        <p>Wichtige Syntax:</p>
+        <ul>
+          <li><code>Datentyp name;</code> → <strong>Deklaration</strong></li>
+          <li><code>Datentyp name = wert;</code> → <strong>Initialisierung</strong></li>
+          <li><code>name = neuerWert;</code> → <strong>Veränderung</strong></li>
+        </ul>
+
+        <div class="code-list">
+          <pre><code>String name = "Tom";
+int alter = 12;
+boolean heuteSchule = true;
+double preis = 2.99;
+int punkte = 0;
+punkte = punkte + 1;</code></pre>
+        </div>
+
+        <div class="interactive-block" aria-labelledby="schrittTitel">
+          <h3 id="schrittTitel">Schritt-für-Schritt: <code>punkte = punkte + 1;</code></h3>
+          <p>
+            Klicke auf „Nächster Schritt“ und verfolge, was passiert.
+          </p>
+          <ol id="stepList" class="step-list" aria-live="polite"></ol>
+          <div class="button-row">
+            <button id="nextStep" type="button">Nächster Schritt</button>
+            <button id="resetStep" type="button">Neu starten</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="datentypen" aria-labelledby="datentypenTitel" class="card">
+        <h2 id="datentypenTitel">Datentypen</h2>
+        <p>In Java hat jede Variable einen Typ.</p>
+        <div class="type-grid">
+          <article class="type-card">
+            <h3><code>int</code></h3>
+            <p>Ganze Zahlen, z. B. <code>12</code></p>
+          </article>
+          <article class="type-card">
+            <h3><code>double</code></h3>
+            <p>Kommazahlen, z. B. <code>3.5</code> oder <code>2.99</code></p>
+          </article>
+          <article class="type-card">
+            <h3><code>boolean</code></h3>
+            <p>Wahrheitswerte: <code>true</code> oder <code>false</code></p>
+          </article>
+          <article class="type-card">
+            <h3><code>String</code></h3>
+            <p>Text in Anführungszeichen, z. B. <code>"Mia"</code></p>
+          </article>
+        </div>
+
+        <div class="interactive-block" aria-labelledby="typUebungTitel">
+          <h3 id="typUebungTitel">Übung: Welcher Datentyp passt?</h3>
+          <form id="datentypForm">
+            <div class="exercise-row">
+              <label for="typ12"><code>12</code></label>
+              <select id="typ12" data-correct="int">
+                <option value="">Bitte wählen</option>
+                <option value="int">int</option>
+                <option value="double">double</option>
+                <option value="boolean">boolean</option>
+                <option value="String">String</option>
+              </select>
+              <span class="feedback" id="fb-typ12"></span>
+            </div>
+
+            <div class="exercise-row">
+              <label for="typ35"><code>3.5</code></label>
+              <select id="typ35" data-correct="double">
+                <option value="">Bitte wählen</option>
+                <option value="int">int</option>
+                <option value="double">double</option>
+                <option value="boolean">boolean</option>
+                <option value="String">String</option>
+              </select>
+              <span class="feedback" id="fb-typ35"></span>
+            </div>
+
+            <div class="exercise-row">
+              <label for="typMia"><code>"Mia"</code></label>
+              <select id="typMia" data-correct="String">
+                <option value="">Bitte wählen</option>
+                <option value="int">int</option>
+                <option value="double">double</option>
+                <option value="boolean">boolean</option>
+                <option value="String">String</option>
+              </select>
+              <span class="feedback" id="fb-typMia"></span>
+            </div>
+
+            <div class="exercise-row">
+              <label for="typTrue"><code>true</code></label>
+              <select id="typTrue" data-correct="boolean">
+                <option value="">Bitte wählen</option>
+                <option value="int">int</option>
+                <option value="double">double</option>
+                <option value="boolean">boolean</option>
+                <option value="String">String</option>
+              </select>
+              <span class="feedback" id="fb-typTrue"></span>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <section id="fehler" aria-labelledby="fehlerTitel" class="card">
+        <h2 id="fehlerTitel">Häufige Fehler</h2>
+        <ul>
+          <li>Eine Variable ist <strong>nicht</strong> der Wert selbst.</li>
+          <li><code>=</code> bedeutet in Java <strong>Zuweisung</strong>.</li>
+          <li>String-Werte brauchen <strong>Anführungszeichen</strong>.</li>
+          <li>Java unterscheidet <strong>Groß- und Kleinschreibung</strong>.</li>
+        </ul>
+
+        <div class="interactive-block" aria-labelledby="fehlerUebungTitel">
+          <h3 id="fehlerUebungTitel">Übung: Fehler finden</h3>
+          <div class="error-item" data-correct="richtig">
+            <code>int alter = 12;</code>
+            <div class="button-row">
+              <button type="button" class="error-btn" data-answer="richtig">Richtig</button>
+              <button type="button" class="error-btn" data-answer="falsch">Falsch</button>
+            </div>
+            <p class="feedback"></p>
+          </div>
+
+          <div class="error-item" data-correct="falsch">
+            <code>String name = Mia;</code>
+            <div class="button-row">
+              <button type="button" class="error-btn" data-answer="richtig">Richtig</button>
+              <button type="button" class="error-btn" data-answer="falsch">Falsch</button>
+            </div>
+            <p class="feedback"></p>
+          </div>
+
+          <div class="error-item" data-correct="falsch">
+            <code>boolean fertig = "true";</code>
+            <div class="button-row">
+              <button type="button" class="error-btn" data-answer="richtig">Richtig</button>
+              <button type="button" class="error-btn" data-answer="falsch">Falsch</button>
+            </div>
+            <p class="feedback"></p>
+          </div>
+        </div>
+      </section>
+
+      <section id="quiz" aria-labelledby="quizTitel" class="card">
+        <h2 id="quizTitel">Mini-Quiz</h2>
+        <p>Teste dein Wissen. Am Ende bekommst du eine Punktzahl.</p>
+
+        <form id="quizForm">
+          <fieldset>
+            <legend>1) Was ist eine Variable?</legend>
+            <label><input type="radio" name="q1" value="a" /> Ein fester Text ohne Namen</label>
+            <label><input type="radio" name="q1" value="b" /> Ein benannter Speicherplatz</label>
+            <label><input type="radio" name="q1" value="c" /> Eine Schleife</label>
+          </fieldset>
+
+          <fieldset>
+            <legend>2) Welcher Typ passt zu <code>2.99</code>?</legend>
+            <label><input type="radio" name="q2" value="a" /> int</label>
+            <label><input type="radio" name="q2" value="b" /> String</label>
+            <label><input type="radio" name="q2" value="c" /> double</label>
+          </fieldset>
+
+          <fieldset>
+            <legend>3) Was bedeutet <code>=</code> in Java?</legend>
+            <label><input type="radio" name="q3" value="a" /> Zuweisung</label>
+            <label><input type="radio" name="q3" value="b" /> Immer mathematische Gleichheit</label>
+            <label><input type="radio" name="q3" value="c" /> Vergleich von Strings</label>
+          </fieldset>
+
+          <fieldset>
+            <legend>4) Was ist richtig?</legend>
+            <label><input type="radio" name="q4" value="a" /> String name = Tom;</label>
+            <label><input type="radio" name="q4" value="b" /> String name = "Tom";</label>
+            <label><input type="radio" name="q4" value="c" /> string name = "Tom";</label>
+          </fieldset>
+
+          <fieldset>
+            <legend>5) Was passiert bei <code>punkte = punkte + 1;</code>?</legend>
+            <label><input type="radio" name="q5" value="a" /> Der alte Wert wird gelesen, +1 gerechnet und gespeichert</label>
+            <label><input type="radio" name="q5" value="b" /> Der Name wird verändert</label>
+            <label><input type="radio" name="q5" value="c" /> Java löscht die Variable</label>
+          </fieldset>
+
+          <fieldset>
+            <legend>6) Wähle einen sinnvollen Variablennamen:</legend>
+            <label><input type="radio" name="q6" value="a" /> x1</label>
+            <label><input type="radio" name="q6" value="b" /> alterInJahren</label>
+            <label><input type="radio" name="q6" value="c" /> ???</label>
+          </fieldset>
+
+          <button type="button" id="quizAuswerten">Quiz auswerten</button>
+        </form>
+        <p id="quizErgebnis" class="quiz-result" aria-live="polite"></p>
+      </section>
+
+      <section id="merksatz" aria-labelledby="merksatzTitel" class="card highlight">
+        <h2 id="merksatzTitel">Merkkasten / Zusammenfassung</h2>
+        <p>
+          <strong>
+            Eine Variable ist ein benannter Speicherplatz für einen Wert. In Java hat
+            jede Variable einen Typ, einen Namen und oft einen Startwert.
+          </strong>
+        </p>
+        <ul>
+          <li>Denke an eine beschriftete Box.</li>
+          <li>Wähle klare Namen, z. B. <code>alter</code> statt <code>a</code>.</li>
+          <li>Beachte den Typ: <code>int</code>, <code>double</code>, <code>boolean</code>, <code>String</code>.</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="container footer">
+      <p>Lernwebseite für den Informatikunterricht · Thema: Variablen in Java</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
